@@ -1,5 +1,5 @@
 alias trs='termux-reload-settings'
 
 op() {
-    ssh -t win 'psmux new -A -s work'
+    ssh -t win 'powershell.exe -NoLogo -NoExit -Command "psmux new -A -s work"'
 }
