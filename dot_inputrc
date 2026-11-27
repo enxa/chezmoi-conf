@@ -1,0 +1,2 @@
+# 禁用 Readline 响铃，避免空输入退格和历史命令边界操作触发震动。
+set bell-style none
