@@ -1,0 +1,8 @@
+# chezmoi:modify-template
+{{- $rc := .chezmoi.stdin -}}
+{{- $line := "alias trs='termux-reload-settings'" -}}
+{{- $rc -}}
+{{- if not (has $line (splitList "\n" (replace "\r\n" "\n" $rc))) -}}
+{{- if and $rc (not (hasSuffix "\n" $rc)) }}{{ "\n" }}{{ end -}}
+{{- printf "%s\n" $line -}}
+{{- end -}}
